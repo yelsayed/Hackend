@@ -1,0 +1,23 @@
+.card {
+    height: 189px;
+    background: #D0021B;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.50);
+    overflow-y: scroll;
+}
+
+.jumbo-number {
+    font-size: 80px;
+    text-align: center;
+    font-family: arial;
+}
+
+.fact-text {
+    color: white;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 300;
+    margin-top: 23px;
+	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}

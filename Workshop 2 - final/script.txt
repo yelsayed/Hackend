@@ -1,0 +1,55 @@
+1 - Teach them the basic structure of HTML, the code should look like this:
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ball game</title>
+	</head>
+	<body>
+		
+	</body>
+	</html>
+2 - Teach them how to link code, i.e.
+	<link rel="stylesheet" href="style.css">
+	
+	and
+	<script src="script.js"></script>
+
+3 - Teach them how to make a div and how to color it using CSS... so far they don't know anything about the difference between and ID and a class, the HTML code should look like this:
+	<div id="bot"></div>
+
+	and the CSS should look like this after diverting to the fact that you need to draw a circle:
+	#bot {
+		position: absolute;
+		background: red;
+		height:100px;
+		width: 100px;
+		border-radius: 50%;
+		top: 45%;
+		left: 45%;
+	}
+
+3 - Teach them how to call Javascript functions, in this case it's onmouseover
+
+4 - Be sure to show one ball moving around and select it using it's id, this is where the code looks something like this:
+
+    ball = document.getElementById('bot');
+	ball.style.top = "10%";
+	ball.style.left = "40%";
+
+5 - Time for random numbers, get some random numbers and just make the ball move to these numbers, show before writing this out immediately that it won't work without '%' sign:
+	
+    topRandomNumber = Math.floor(Math.random() * 101);
+    leftRandomNumber = Math.floor(Math.random() * 101);
+    ball.style.top = topRandomNumber + "%";
+	ball.style.left = leftRandomNumber + "%";
+
+6 - Now the ball is moving, but it's very jittery, how about we make it animated... simple, just add another field to the CSS... remember to explain that this says if any of my property changes transition to it instead of taking the quality immediately, show an example of changing colors:
+	transition: all 0.5s;
+
+7 - Now let's add a score board, but before that, let's make it change color, also let's change the cursor when it's on top of our element.
+
+NOTES: 
+# Clicking is a bit weird cuz we need to adjust the z-index
+# Transition, instead of transitioning all, just transition only when you change the positions (or keep it the same, it looks good as it is)
+# Clicking is too difficult and doesn't actually work, so how about we make a delay
